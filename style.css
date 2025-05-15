@@ -1,0 +1,82 @@
+html{
+    background-color: #231F20;
+}
+.menu-principal {
+    background-color: #231F20;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu-principal nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    word-spacing: 20px;
+}
+
+.menu-principal nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-principal nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-principal nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.logo{
+    height: auto;
+    width: 75px;
+    border-radius: 10%;
+}
+.home{
+    margin-left: 50px;
+}
+.empresa{
+    margin-left: 60px;
+}
+.servicos{
+    margin-left: 70px;
+}
+.contato{
+    margin-left: 90px;
+}
+
+.conteudo-principal{
+    background-color: #fdffff;
+    color: rgb(11, 11, 11);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.conteudo-secundario{
+    background-color: #f8fafa;
+    color: rgb(15, 14, 14);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.imagem1{
+    display: block;
+    margin-left:auto;
+    margin-right:auto ;
+}
+
+.imagem2{
+    height: auto;
+    width: 75px;
+}
+
+.rodape{
+    color:white;
+    text-align:center;
+}
