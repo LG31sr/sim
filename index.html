@@ -1,72 +1,298 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang="pt-br">
 <head>
- <meta charset = "utf-8">
- <title> Home - Site da Escola </title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Nome da Escola</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #34495e;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #2980b9;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Estilos do Carrossel */
+        .carousel-container {
+            position: relative;
+            max-width: 900px; /* Largura máxima do carrossel */
+            margin: 20px auto;
+            overflow: hidden; /* Garante que as imagens que estão fora da vista fiquem escondidas */
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .carousel-slide {
+            display: flex; /* Para colocar as imagens lado a lado */
+            transition: transform 0.5s ease-in-out; /* Animação suave */
+        }
+        .carousel-slide img {
+            width: 100%; /* Faz a imagem ocupar 100% da largura do slide */
+            height: 450px; /* Altura fixa para as imagens do carrossel */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+            flex-shrink: 0; /* Impede que as imagens encolham */
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 100;
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+        .carousel-dots {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f0f0f0;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #717171;
+        }
+    </style>
 </head>
 <body>
- <main id = "site">
-  <div class = "cabeacalho">
-    <div class = "menu-principal">
-      <nav>
-      <ul>
-        <li>
-         <a href = "index14.html"> Home </a>
-        </li>
-        <li>
-         <a href = "escola14.html"> Escola </a>
-        </li>
-        <li>
-         <a href = "produtos14.html"> Produtos </a>
-        </li>
-        <li>
-         <a href = "eventos14.html"> Eventos </a>
-        </li>
-        <li>
-         <a href = "contato14.html"> Contato </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class = "conteudo-principal">
-    <h1>Bem-vindo à nossa escola!</h1>
-       <img src="logo.png" alt="oi" class="imagem1" width="400">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-  </div>
-  <div class = "conteudo-secundario">
-    <h1>Sobre a escola</h1>
-      <p>
-        A Escola Inez Vicente Borocz C M, localizada em Curitiba, no bairro Sitio Cercado, é uma instituição pública dedicada ao Ensino Fundamental e Ensino Médio, atendendo tanto no período diurno quanto noturno. Com foco em inclusão, a escola possui diversas adaptações de acessibilidade, como rampas, sinalização tátil e visual, além de banheiros adequados para alunos com deficiência. A infraestrutura inclui uma biblioteca equipada, quadras de esportes, e laboratórios de ciências e informática, que oferecem acesso à tecnologia e internet de alta velocidade.
+    <header>
+        <h1>Nome da Escola</h1>
+        <p>Educação de Qualidade para um Futuro Brilhante</p>
+    </header>
 
-        A escola também valoriza a sustentabilidade, promovendo a separação de resíduos e o respeito ao meio ambiente. Os alunos têm acesso a alimentação escolar e a um ambiente que estimula tanto o aprendizado académico quanto a prática desportiva. Com uma equipe pedagógica qualificada, a escola prepara jovens para os desafios do futuro na sociedade.
-    </p>
-      <p>
-              </p>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Sobre Nós.html">Sobre Nós</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-<div class = "rodape">
-    <p id = "telefone-email">
-        Contato@exemplo.com.br 
-        <br>
-        <Span class = "DDD">41</Span>35643690
-    </p>
-    <p id = "endereco">
-      RUA IGNEZ DE LOURDES G DE MACEDO, 331, SITIO CERCADO, Curitiba-PR, 81920090, Brasil
-        <br>
-        CEP 81920-090
-        <br>
-        Curitiba/PR
-    </p>
+    <div class="container">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/900/450?random=1" alt="Imagem 1 da escola">
+                <img src="https://picsum.photos/900/450?random=2" alt="Imagem 2 da escola">
+                <img src="https://picsum.photos/900/450?random=3" alt="Imagem 3 da escola">
+                <img src="https://picsum.photos/900/450?random=4" alt="Imagem 4 da escola">
+            </div>
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+            <div class="carousel-dots">
+                </div>
+        </div>
 
-    <small id = "copyright">
-        &copy;escola.ltda
-        Todos os direitos reservados
-    </small>
-</div>
-</div>
+        <section id="introducao">
+            <h2>Bem-vindo ao Site do Colegio Inêz
+            </h2>
+            <p>
+                No Colegio Inêz , acreditamos que a educação é a chave para um futuro brilhante. Somos uma comunidade dedicada a inspirar, nutrir e capacitar cada aluno a alcançar seu potencial máximo. Com um ambiente de aprendizado dinâmico e inclusivo, combinamos excelência acadêmica com o desenvolvimento de habilidades essenciais para a vida.
 
+Explore nosso site para conhecer nossos programas de ensino, a infraestrutura moderna, os projetos inovadores e a equipe pedagógica apaixonada que faz da escola um lugar onde o conhecimento floresce e os sonhos se tornam realidade.
+            </p>
+            <p>
+                
+        </section>
+
+        <hr>
+
+        <section id="sobre-nos">
+            <h2>Sobre a Escola</h2>
+            <p>
+                A Escola Inez Vicente Borocz C M, localizada estrategicamente no vibrante bairro Sítio Cercado, em Curitiba, é um pilar da educação pública, dedicada a moldar futuros promissores. Com um compromisso inabalável com o Ensino Fundamental e Médio, nossa instituição atende tanto nos períodos diurno quanto noturno, garantindo que a oportunidade de aprender seja acessível a todos. 
+            </p>
+            <p>
+                
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="noticias-eventos">
+            <h2></h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div style="width: 45%;">
+                    <h3></h3>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div style="width: 45%;">
+                    <h3></h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy;Colegio Inêz Vicente Borocz . Todos os direitos reservados.</p>
+        <p>RUA IGNEZ DE LOURDES G DE MACEDO, 331, SITIO CERCADO, Curitiba-PR, 81920090, Brasil | Telefone: (41) 35643690| Email:ctainezvicente@seed.pr.gov.br.</p>
+    </footer>
+
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+        const prevBtn = document.querySelector('.carousel-button.prev');
+        const nextBtn = document.querySelector('.carousel-button.next');
+        const carouselDotsContainer = document.querySelector('.carousel-dots');
+
+        let counter = 0;
+        const size = carouselImages[0].clientWidth; // Largura de uma imagem
+        let autoSlideInterval;
+
+        // Função para criar os indicadores (dots)
+        function createDots() {
+            carouselImages.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.setAttribute('data-slide', index);
+                carouselDotsContainer.appendChild(dot);
+                dot.addEventListener('click', () => {
+                    clearInterval(autoSlideInterval); // Para o slide automático ao clicar
+                    counter = index;
+                    updateCarousel();
+                    startAutoSlide(); // Reinicia o slide automático
+                });
+            });
+            updateDots();
+        }
+
+        // Função para atualizar o carrossel (mover slide)
+        function updateCarousel() {
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDots();
+        }
+
+        // Função para atualizar os indicadores (dots) ativos
+        function updateDots() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                if (index === counter) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Navegação pelos botões
+        nextBtn.addEventListener('click', () => {
+            clearInterval(autoSlideInterval); // Para o slide automático ao clicar
+            if (counter >= carouselImages.length - 1) {
+                counter = 0; // Volta para o início se chegar ao fim
+            } else {
+                counter++;
+            }
+            updateCarousel();
+            startAutoSlide(); // Reinicia o slide automático
+        });
+
+        prevBtn.addEventListener('click', () => {
+            clearInterval(autoSlideInterval); // Para o slide automático ao clicar
+            if (counter <= 0) {
+                counter = carouselImages.length - 1; // Vai para o fim se estiver no início
+            } else {
+                counter--;
+            }
+            updateCarousel();
+            startAutoSlide(); // Reinicia o slide automático
+        });
+
+        // Configuração do slide automático
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                if (counter >= carouselImages.length - 1) {
+                    counter = 0;
+                } else {
+                    counter++;
+                }
+                updateCarousel();
+            }, 5000); // Muda de imagem a cada 5 segundos (5000ms)
+        }
+
+        // Inicializa o carrossel e o slide automático quando a página carrega
+        window.addEventListener('load', () => {
+            createDots();
+            updateCarousel(); // Define a posição inicial correta
+            startAutoSlide(); // Inicia o slide automático
+        });
+
+        // Adiciona um listener para recalcular o tamanho se a janela for redimensionada
+        window.addEventListener('resize', () => {
+             // Atualiza 'size' com a nova largura da imagem
+            const newSize = carouselImages[0].clientWidth;
+            // Ajusta a translação imediatamente sem animação para evitar problemas visuais
+            carouselSlide.style.transition = 'none';
+            carouselSlide.style.transform = 'translateX(' + (-newSize * counter) + 'px)';
+            // Volta a transição para normal após um pequeno delay para que não interfira no próximo slide
+            setTimeout(() => {
+                carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        });
+    </script>
 </body>
 </html>
